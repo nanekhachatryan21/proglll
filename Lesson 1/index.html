@@ -1,0 +1,163 @@
+<html>
+
+<head>
+    <meta charset="utf8">
+    <script src="p5.js"></script>
+    <script src="grass.js"></script>
+    <script src="grasseater.js"></script>
+    <script src="predator.js"></script>
+    <script src="myfirstcharacter.js"></script>
+    <script src="mysecondcharacter.js"></script>
+    <script src="script.js"></script>
+    <style type="text/css">
+        body {
+            margin: 25px;
+            background-color: rgb(175, 228, 210);
+        }
+
+        canvas {
+            position: relative;
+            bottom: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            color: darkolivegreen;
+            font-size: 50px;
+        }
+
+        table {
+            border: 1px solid #cecece;
+            width: 700px;
+            height: 500px;
+            position: relative;
+            left: 750px;
+            background-color: #f1f1f1;
+        }
+
+        td {
+            background-color: #d4c9c9;
+        }
+
+        td:hover {
+            background-color: #f2f2f2;
+        }
+
+        tr {
+            background-color: #cecece;
+        }
+
+        .td1 {
+            background-color: #c9c2c2;
+        }
+
+        .td1:hover {
+            background-color: #c9c2c2;
+        }
+
+        .td2 {
+            background-color: green;
+        }
+
+        .td2:hover {
+            background-color: green;
+        }
+
+        .td3 {
+            background-color: orange;
+        }
+
+        .td3:hover {
+            background-color: orange;
+        }
+
+        .td4 {
+            background-color: red;
+        }
+
+        .td4:hover {
+            background-color: red;
+        }
+
+        .td5 {
+            background-color: blue;
+        }
+
+        .td5:hover {
+            background-color: blue;
+        }
+
+        .td6 {
+            background-color: pink;
+        }
+
+        .td6:hover {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Game Of Life</h1>
+    <table>
+        <tr>
+            <td>Գույն</td>
+            <td>Անվանում</td>
+            <td>Շարժվում է</td>
+            <td>Ուտում է</td>
+            <td>Բազմանում է</td>
+            <td>Սատկում է</td>
+        </tr>
+        <tr>
+            <td class="td1"></td>
+            <td>Դատարկ վանդակներ</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="td2"></td>
+            <td>Խոտեր</td>
+            <td></td>
+            <td></td>
+            <td>Մոտակա 8 վանդակներում, 4 տակտը մեկ</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="td3"></td>
+            <td>Խոտակերներ</td>
+            <td>Մոտակա 8 վանդակներում, էներգիան քչանում է 1֊ով</td>
+            <td>Խոտերին, մոտակա 8 վանդակներում, շարժվելիս էներգիան ավելանում է 1֊ով </td>
+            <td>Բազմանում է մոտակա տարածքներում, երբ էներգիան 10֊ից ավել է</td>
+            <td>Սատկում է, երբ էներգիան փոքր է 0֊ից</td>
+        </tr>
+        <tr>
+            <td class="td4"></td>
+            <td>Գիշատիչներ</td>
+            <td>Մոտակա 8 վանդակներում, էներգիան քչանում է 1֊ով</td>
+            <td>Խոտակերներին, մոտակա 8 վանդակներում, շարժվելիս էներգիան ավելանում է 2֊ով</td>
+            <td>Բազմանում է մոտակա տարածքներում, երբ էներգիան 15֊ից ավել է </td>
+            <td>Սատկում է, երբ էներգիան փոքր է 0֊ից</td>
+        </tr>
+        <tr>
+            <td class="td5"></td>
+            <td>Իմ առաջին կերպարը</td>
+            <td>Մոտակա 8 վանդակներից 4-ում, միայն անկյունագծերով</td>
+            <td>Ուտում է խոտերին, խոտակերներին և գիշատիչներին</td>
+            <td>Չի բազմանում</td>
+            <td>Սատկում է, երբ էներգիան փոքր է 0֊ից</td>
+        </tr>
+        <tr>
+            <td class="td6"></td>
+            <td>Իմ երկրորդ կերպարը</td>
+            <td>Թռչում է 4 վանդակ, միայն հորիզոնականներով և ուղղաձիգերով</td>
+            <td>Ուտում է խոտերին, իմ առաջին կերպարին և գիշատիչներին</td>
+            <td>Չի բազմանում</td>
+            <td>Սատկում է, երբ էներգիան փոքր է 0֊ից</td>
+        </tr>
+    </table>
+</body>
+
+</html>
